@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://b62tnylh3bc1w"]
+
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_75mv7"]
+[ext_resource type="PackedScene" uid="uid://q4ynkd4sj06k" path="res://scenes/menus/pause_screen.tscn" id="2_4ck65"]
+[ext_resource type="PackedScene" uid="uid://7ytw7qt186kp" path="res://scenes/menus/main_menu.tscn" id="3_t6rnv"]
+[ext_resource type="PackedScene" uid="uid://bfddf2no14jol" path="res://scenes/dvd_screensaver/dvd_screensaver.tscn" id="4_s7xyx"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_75mv7")
+
+[node name="MainMenu" parent="." instance=ExtResource("3_t6rnv")]
+dvd_screensaver = ExtResource("4_s7xyx")
+
+[node name="Game" type="Node" parent="."]
+
+[node name="PauseScreen" parent="." instance=ExtResource("2_4ck65")]
