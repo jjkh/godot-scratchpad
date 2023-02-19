@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-@export var speed = 40.0
+@export var speed = 120.0
 var velocity = Vector2(speed, speed)
 
 func _physics_process(delta):

@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bfddf2no14jol"]
+[gd_scene load_steps=8 format=3 uid="uid://bfddf2no14jol"]
 
 [ext_resource type="Script" path="res://scenes/dvd_screensaver/bouncer.gd" id="1_3wap7"]
 [ext_resource type="Texture2D" uid="uid://cuuan5wgu3xrx" path="res://assets/icon.svg" id="2_0boqj"]
+[ext_resource type="Script" path="res://scenes/dvd_screensaver/Arena.gd" id="3_08bx0"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ritew"]
 normal = Vector2(2.08165e-12, 1)
@@ -20,7 +21,6 @@ normal = Vector2(2.08165e-12, -1)
 [node name="Player" type="StaticBody2D" parent="."]
 position = Vector2(-35, 49)
 script = ExtResource("1_3wap7")
-speed = 60.0
 metadata/_edit_group_ = true
 
 [node name="Sprite" type="Sprite2D" parent="Player"]
@@ -32,7 +32,7 @@ position = Vector2(230, 89)
 polygon = PackedVector2Array(64, -60.8, 64, 59, 59.6, 64, -60.1, 64, -64, 60.7, -64, -59, -59, -63.8, 59.1, -64)
 
 [node name="Arena" type="StaticBody2D" parent="."]
-metadata/_edit_group_ = true
+script = ExtResource("3_08bx0")
 
 [node name="Top" type="CollisionShape2D" parent="Arena"]
 position = Vector2(400, 2.08165e-12)

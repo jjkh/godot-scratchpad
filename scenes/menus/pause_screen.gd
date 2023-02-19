@@ -1,6 +1,13 @@
-extends ColorRect
+extends Control
 
-@onready var main_menu_scene = get_node("..");
+@onready var main_scene = get_node("/root/Main");
+
+func _unhandled_input(event):
+	if event.is_action_pressed("ui_cancel"):
+		if get_tree().paused:
+			resume()
+		else:
+			pause()
 
 func pause():
 	get_tree().paused = true;
@@ -12,4 +19,4 @@ func resume():
 
 func return_to_main_menu():
 	resume()
-	main_menu_scene.return_to_main_menu()
+	main_scene.return_to_main_menu()
